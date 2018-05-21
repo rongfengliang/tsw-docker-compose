@@ -3,7 +3,7 @@
 ## How to run
 
 ```code
-docker-compose buiuld
+docker-compose build
 docker-compose up -d
 ```
 
