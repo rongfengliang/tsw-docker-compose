@@ -1,0 +1,20 @@
+version: '3'
+services:
+  tsw:
+    image: tsw
+    build:
+      context: ./basic
+    ports: 
+      - 8089:80
+  tsw-sky:
+    image: tsw-sky
+    build:
+      context: ./sky
+    depends_on:
+      - memcached
+    ports: 
+      - 8090:8080
+  memcached:
+    image: memcached
+    ports:
+      - 11211:11211

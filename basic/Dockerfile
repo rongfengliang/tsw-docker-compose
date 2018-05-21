@@ -1,0 +1,5 @@
+FROM node:9.11
+WORKDIR /app
+COPY ./TSW/ /app/TSW/
+EXPOSE 80
+ENTRYPOINT [ "node","TSW"]
